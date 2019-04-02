@@ -1,11 +1,17 @@
 language: node_js
 node_js:
-  - '10'
+- '10'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
-  
+- npm run lint
+- npm test
+- npm run build
+
+deploy:
+  skip_cleanup: true
+  provider: heroku
+  app: arnemolland-build-and-deploy
+  api_key:
+    secure: gKxP0Iqf59TxPWGWth5guNancURRzxeC4GHxDNx/7sz98jiENypBsggqm0LRcuUiT3bpcEl8R1zw+4EUUIAndecz9am2vgQCMgO+WFfiQGaCTOdCu9Mhb5/XJe+sAlDiaK8yjlXKicYgAX/BH7yWKx2aFTDyYyHgY4lq2WjdtN02W4e90Y4ZOiZxHEf7Jrzj/y/mMk2Y9f5b8G9uPStZHhhLJUH0bOti6OpTzTZAkcsEwZTOVrkmNNfj+xzMGrtAV8jL5ckQK8SDJX3tVccyUbugmR81XQQhZwhNp58iaN8jRdrimg5DUsz5T+lVHwILmDU36mXKLjLZJZEFTb+/xNXVu0FcNuAldtcJ6ZnGYr5SeMOkZj9S4HHWaPpM96GnaJoLeabDlZzsVcn1QKHnHcRN7fR01dC+80FEkCapxkM8R0eFwDjiIgVoM9Ooa3F8tYmYQ3mRvPRJ7veL3fxNuDIQfvir8K0USz9kA6+tzYfBFd4uxjGMEinUYyAz9alz9iXOC6IEs/uXX+0JopVxDJf9uMvSuxk1dymi6lORKC4WtMZiSepT21Pbm4LYP/9v1DHlE9T5SJp0M1oQY1VGRj7PU7ahTLC+WC+CvkZ6+nEcD+lowXyp3CYYti2dq38AW3rl6LsqkE6+mBloTKY0kUbz5VtoqgARuUPTpn1EmHo=
